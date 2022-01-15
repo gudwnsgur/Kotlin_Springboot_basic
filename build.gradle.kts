@@ -22,6 +22,11 @@ repositories {
 }
 
 dependencies {
+    implementation ("org.springframework.boot:spring-boot-starter-data-jpa")
+// https://mvnrepository.com/artifact/com.h2database/h2
+    testImplementation("com.h2database:h2:1.4.199")
+
+
     implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
@@ -30,6 +35,7 @@ dependencies {
     compileOnly("org.projectlombok:lombok")
     annotationProcessor("org.projectlombok:lombok")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+
 }
 
 tasks.withType<KotlinCompile> {

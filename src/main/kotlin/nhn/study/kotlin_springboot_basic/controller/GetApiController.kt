@@ -1,4 +1,4 @@
-package nhn.study.kotlin_springboot_basic.controller.get
+package nhn.study.kotlin_springboot_basic.controller
 
 import nhn.study.kotlin_springboot_basic.model.http.UserRequest
 import org.springframework.web.bind.annotation.*
