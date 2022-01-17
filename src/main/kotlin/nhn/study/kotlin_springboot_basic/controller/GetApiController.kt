@@ -1,6 +1,6 @@
 package nhn.study.kotlin_springboot_basic.controller
 
-import nhn.study.kotlin_springboot_basic.model.http.UserRequest
+import nhn.study.kotlin_springboot_basic.dto.UserRequestDto
 import org.springframework.web.bind.annotation.*
 
 @RestController // REST API Controller 동작
@@ -32,7 +32,7 @@ class GetApiController {
     // RequestParam 으로 객체 받기
     // UserRequest : name, age, address, email
     @GetMapping("/query-param/object")
-    fun queryParamObject(userRequest: UserRequest):UserRequest{
+    fun queryParamObject(userRequest: UserRequestDto): UserRequestDto {
         println(userRequest)
         return userRequest
     }

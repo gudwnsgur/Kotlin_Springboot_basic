@@ -1,6 +1,6 @@
 package nhn.study.kotlin_springboot_basic.controller
 
-import nhn.study.kotlin_springboot_basic.model.http.UserRequest
+import nhn.study.kotlin_springboot_basic.dto.UserRequestDto
 import org.springframework.web.bind.annotation.*
 
 @RestController
@@ -21,7 +21,7 @@ class PostController {
     // json -> object
     // object -> json
     @PostMapping("/post-mapping/object")
-    fun postMappingObject(@RequestBody userRequest:UserRequest): UserRequest {
+    fun postMappingObject(@RequestBody userRequest: UserRequestDto): UserRequestDto {
         // json -> object
         print(userRequest)
         return userRequest
